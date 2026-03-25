@@ -681,7 +681,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--sp-2xl) 56px;
+  padding: 320px 56px;
   text-align: center;
   color: var(--col-white);
 }
@@ -972,7 +972,7 @@ body {
     padding: var(--sp-2xl) 40px;
   }
 
-  .seventy { padding: var(--sp-2xl) 40px; }
+  .seventy { padding: 240px 40px; }
 
   .why { padding-top: 80px; }
   .why__inner { padding: var(--sp-xs) 40px; }
@@ -1034,7 +1034,7 @@ body {
   .udg { padding: var(--sp-2xl) 24px; }
   .udg__headline { margin-bottom: var(--sp-sm); }
 
-  .seventy { padding: var(--sp-2xl) 24px; }
+  .seventy { padding: 200px 24px; }
   .seventy__headline { margin-bottom: var(--sp-sm); }
   .seventy__body { margin-bottom: var(--sp-sm); }
 
