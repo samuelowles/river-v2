@@ -7,9 +7,10 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   if (!wrap) return;
 
   ScrollTrigger.create({
-    trigger: '#seventy',
-    start: 'top 50%',
-    end: 'bottom 50%',
+    trigger: '.udg__accent',
+    start: 'bottom top',
+    endTrigger: '.seventy__accent',
+    end: 'bottom top',
     toggleClass: { targets: wrap, className: 'bg-black' }
   });
 })();
