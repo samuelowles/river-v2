@@ -11,7 +11,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     start: 'bottom top',
     endTrigger: '.seventy__accent',
     end: 'bottom top',
-    toggleClass: { targets: wrap, className: 'bg-black' }
+    toggleClass: { targets: wrap, className: 'bg-light' }
   });
 })();
 
@@ -132,15 +132,15 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
   tl.to(gsap.utils.toArray('.gaco-instance .gaco-path'), {
     strokeDashoffset: 0,
-    duration: 1.8,
+    duration: 3.5,
     ease: 'power2.out', 
-    stagger: { amount: 1.5 } 
+    stagger: { amount: 3.0 } 
   }, 0.2);
 
   tl.to('.gaco-instance .gaco-path', {
     fill: '#000000',
     stroke: 'transparent',
-    duration: 0.6,
+    duration: 1.2,
     ease: 'power1.inOut',
   }, "-=0.2");
 })();
