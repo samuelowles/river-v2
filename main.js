@@ -6,25 +6,22 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   const wrap = document.getElementById('scroll-wrap');
   if (!wrap) return;
 
+  // Trigger exactly when the 'join the waitlist' button disappears from the viewport
+  // Offset by 50px upwards to ensure it doesn't trigger too early
   ScrollTrigger.create({
     trigger: '#cta-product',
+    start: 'bottom top-=50px',
+    onEnter: () => document.body.classList.add('is-dark-slide'),
+    onLeaveBack: () => document.body.classList.remove('is-dark-slide')
+  });
+
+  // Revert back to white gracefully as the final dark text scrolls away
+  // Triggered when 'What if someone was always looking out for you?' exits the top of the screen.
+  ScrollTrigger.create({
+    trigger: '.blue-section__headline',
     start: 'bottom top',
-    onEnter: () => wrap.style.backgroundColor = '#ebeced',
-    onLeaveBack: () => wrap.style.backgroundColor = 'var(--col-white)'
-  });
-
-  ScrollTrigger.create({
-    trigger: '#seventy',
-    start: 'top 50%',
-    onEnter: () => wrap.style.backgroundColor = '#e3e5ea',
-    onLeaveBack: () => wrap.style.backgroundColor = '#ebeced'
-  });
-
-  ScrollTrigger.create({
-    trigger: '.why__headline',
-    start: 'bottom 80%',
-    onEnter: () => wrap.style.backgroundColor = 'var(--col-white)',
-    onLeaveBack: () => wrap.style.backgroundColor = '#e3e5ea'
+    onEnter: () => document.body.classList.remove('is-dark-slide'),
+    onLeaveBack: () => document.body.classList.add('is-dark-slide')
   });
 })();
 
