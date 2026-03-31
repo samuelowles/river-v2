@@ -7,11 +7,24 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   if (!wrap) return;
 
   ScrollTrigger.create({
-    trigger: '.udg__accent',
+    trigger: '#cta-product',
     start: 'bottom top',
-    endTrigger: '.seventy__accent',
-    end: 'bottom top',
-    toggleClass: { targets: wrap, className: 'bg-light' }
+    onEnter: () => wrap.style.backgroundColor = '#ebeced',
+    onLeaveBack: () => wrap.style.backgroundColor = 'var(--col-white)'
+  });
+
+  ScrollTrigger.create({
+    trigger: '#seventy',
+    start: 'top 50%',
+    onEnter: () => wrap.style.backgroundColor = '#e3e5ea',
+    onLeaveBack: () => wrap.style.backgroundColor = '#ebeced'
+  });
+
+  ScrollTrigger.create({
+    trigger: '.why__headline',
+    start: 'bottom 80%',
+    onEnter: () => wrap.style.backgroundColor = 'var(--col-white)',
+    onLeaveBack: () => wrap.style.backgroundColor = '#e3e5ea'
   });
 })();
 
