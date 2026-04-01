@@ -564,6 +564,7 @@ body.is-dark-slide .product::after {
 .product__video-visible {
     width: 100%;
     padding-bottom: 0px;
+    padding-top: 128px;
 }
 
 .product__dashboard-container {
@@ -572,8 +573,7 @@ body.is-dark-slide .product::after {
     align-items: center;
     gap: 4px;
     width: 100vw;
-    height: 398px;
-    padding-top: 128px;
+    height: 270px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -1319,7 +1319,18 @@ body.is-dark-slide .why__drawing path {
     }
 
     .product__dashboard-container {
-        height: 240px;
+        height: auto;
+        min-height: 240px;
+    }
+    
+    .gaco-instance {
+        width: 120vw;
+        height: auto;
+    }
+    
+    .gaco-instance svg {
+        width: 100%;
+        height: auto;
     }
 
     .product__inner {
@@ -1465,7 +1476,18 @@ body.is-dark-slide .why__drawing path {
     }
 
     .product__dashboard-container {
-        height: 165px;
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .gaco-instance {
+        width: 140vw;
+        height: auto;
+    }
+    
+    .gaco-instance svg {
+        width: 100%;
+        height: auto;
     }
 
     .product__inner {
